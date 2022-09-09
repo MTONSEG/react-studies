@@ -1,6 +1,6 @@
-import cls from '../Profile.module.css';
+import cls from './userInfo.module.css';
 
-const mainUser = () => {
+const userInfo = () => {
 	return (
 		<div className={cls.user}>
 			<div className={cls.avatar}>
@@ -25,4 +25,4 @@ const mainUser = () => {
 	);
 }
 
-export default mainUser;
+export default userInfo;

@@ -1,0 +1,25 @@
+.post {
+	display: flex;
+	gap: 20px;
+	margin-bottom: 20px;
+}
+.post:last-child {
+	margin-bottom: 0;
+}
+
+.avatar {
+	width: 100px;
+	height: 100px;
+	position:relative;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.avatar img {
+	position: absolute;
+	object-fit: cover;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}

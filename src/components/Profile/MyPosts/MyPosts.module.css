@@ -8,7 +8,9 @@
 	color: rgb(65, 65, 65);
 }
 
-
+.from {
+	padding: 5px;
+}
 
 .input {
 	display: block;
@@ -27,4 +29,5 @@
 	color: #fff;
 	border: none;
 	padding: 10px 30px;
+	margin-bottom: 40px;
 }
