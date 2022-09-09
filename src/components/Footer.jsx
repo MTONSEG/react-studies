@@ -1,6 +1,8 @@
+import cls from './Footer.module.css';
+
 const Footer = () => {
 	return (
-		<footer className='footer'>
+		<footer className={cls.block}>
 			siteName
 		</footer>
 	);

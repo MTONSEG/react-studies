@@ -1,0 +1,15 @@
+
+.block {
+	grid-area: header;
+	background: grey;
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	display: block;
+	border-radius: 50%;
+	max-width: 40px;
+}
+

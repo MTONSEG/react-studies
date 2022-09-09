@@ -1,0 +1,17 @@
+.nav {
+	grid-area: nav;
+	background: rgb(233, 233, 233);
+}
+
+.nav__list {
+	padding: 15px;
+}
+
+.nav__item {
+	margin-bottom: 10px;
+}
+
+.nav__link {
+	color: black;
+
+}

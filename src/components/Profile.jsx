@@ -1,11 +1,14 @@
+import cls from './Profile.module.css'
 import mainUser from "./libs/mainUser";
 import mainPic from "./libs/mainPic";
+import Posts from './Posts';
 
 const Main = () => {
 	return (
-		<main className='main'>
+		<main className={cls.main}>
 			{mainPic()}
 			{mainUser()}
+			<Posts/>
 		</main>
 	)
 }

@@ -1,9 +1,14 @@
+import cls from '../Profile.module.css'
+
 const mainPic = () => {
 	return (
-		<div className='main__pic'>
-			<img className='main__img' src='https://picsum.photos/1200/300' />
+		<div className={cls.picture}>
+			<img
+				className={cls.img}
+				src='https://picsum.photos/1200/300' />
 		</div>
 	)
 }
 
 export default mainPic;
+
