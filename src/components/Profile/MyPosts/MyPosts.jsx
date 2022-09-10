@@ -1,7 +1,7 @@
 import cls from './MyPosts.module.scss';
 import Post from './Post/Post';
 
-const MyPosts = () => {
+const MyPosts = (props) => {
 	return (
 		<div className={cls.block}>
 			<h1 className={cls.title}>My Posts</h1>

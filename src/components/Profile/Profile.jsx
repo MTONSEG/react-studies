@@ -3,13 +3,13 @@ import MyPosts from './MyPosts/MyPosts';
 import UserBgPic from './UserBgPic/UserBgPic';
 import UserInfo from './UserInfo/UserInfo';
 
-const Main = () => {
+const Main = (props) => {
 	return (
-		<main className={cls.main}>
+		<div className={cls.block}>
 			<UserBgPic />
 			<UserInfo/>
 			<MyPosts/>
-		</main>
+		</div>
 	)
 }
 

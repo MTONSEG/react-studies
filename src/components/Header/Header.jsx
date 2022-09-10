@@ -1,6 +1,6 @@
 import cls from './Header.module.scss'
 
-const Header = () => {
+const Header = (props) => {
 	return (
 		<header className={cls.block}>
 			<img className={cls.logo} src='https://picsum.photos/70' />

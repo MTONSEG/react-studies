@@ -1,6 +1,6 @@
 import cls from './UserBgPic.module.css';
 
-const UserBgPic = () => {
+const UserBgPic = (props) => {
 	return (
 		<div className={cls.block}>
 			<img

@@ -1,20 +1,52 @@
 import cls from './Navbar.module.scss';
+import { NavLink } from 'react-router-dom';
 
-const Nav = () => {
+
+const isActive = ({ isActive }) => !isActive ? cls.link : `${cls.link} ${cls.selected}`;
+
+const Nav = (props) => {
 	return (
 		<nav className={cls.block}>
 			<ul className={cls.list}>
 				<li className={cls.item}>
-					<a className={cls.link} href='http://puzmax.pp.ua'>Profile</a>
+					<NavLink
+						to='/profile'
+						className={isActive}
+					>
+						Profile
+					</NavLink>
 				</li>
 				<li className={cls.item}>
-					<a className={cls.link} href='http://puzmax.pp.ua'>Messages</a>
+					<NavLink
+						className={isActive}
+						to='/dialogs'
+					>
+						Messages
+					</NavLink>
 				</li>
 				<li className={cls.item}>
-					<a className={cls.link} href='http://puzmax.pp.ua'>Photos</a>
+					<NavLink
+						className={isActive}
+						to='/news'
+					>
+						News
+					</NavLink>
 				</li>
 				<li className={cls.item}>
-					<a className={cls.link} href='http://puzmax.pp.ua'>Videos</a>
+					<NavLink
+						className={isActive}
+						to='/music'
+					>
+						Music
+					</NavLink>
+				</li>
+				<li className={cls.item}>
+					<NavLink
+						to='/settings'
+						className={isActive}
+					>
+						Settings
+					</NavLink>
 				</li>
 			</ul>
 		</nav>

@@ -1,6 +1,6 @@
 import cls from './Footer.module.scss';
 
-const Footer = () => {
+const Footer = (props) => {
 	return (
 		<footer className={cls.block}>
 			siteName
