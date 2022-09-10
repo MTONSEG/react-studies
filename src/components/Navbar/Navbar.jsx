@@ -1,20 +1,20 @@
-import cls from './Navbar.module.css';
+import cls from './Navbar.module.scss';
 
 const Nav = () => {
 	return (
-		<nav className={cls.nav}>
-			<ul className={cls.nav__list}>
-				<li className={cls.nav__item}>
-					<a className={cls.nav__link} href='http://puzmax.pp.ua'>Profile</a>
+		<nav className={cls.block}>
+			<ul className={cls.list}>
+				<li className={cls.item}>
+					<a className={cls.link} href='http://puzmax.pp.ua'>Profile</a>
 				</li>
-				<li className={cls.nav__item}>
-					<a className={cls.nav__link} href='http://puzmax.pp.ua'>Messages</a>
+				<li className={cls.item}>
+					<a className={cls.link} href='http://puzmax.pp.ua'>Messages</a>
 				</li>
-				<li className={cls.nav__item}>
-					<a className={cls.nav__link} href='http://puzmax.pp.ua'>Photos</a>
+				<li className={cls.item}>
+					<a className={cls.link} href='http://puzmax.pp.ua'>Photos</a>
 				</li>
-				<li className={cls.nav__item}>
-					<a className={cls.nav__link} href='http://puzmax.pp.ua'>Videos</a>
+				<li className={cls.item}>
+					<a className={cls.link} href='http://puzmax.pp.ua'>Videos</a>
 				</li>
 			</ul>
 		</nav>

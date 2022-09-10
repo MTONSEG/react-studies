@@ -1,13 +1,13 @@
-import cls from './Post.module.css';
+import cls from './Post.module.scss';
 
-const Post = () => {
+const Post = (props) => {
 	return (
 		<div className={cls.post}>
 			<div className={cls.avatar}>
-				<img src='https://picsum.photos/500/300' />
+				<img src={props.imageSrc} />
 			</div>
 			<article className={cls.article}>
-				Note: You can prefix paths with ~, as displayed above, to resolve modules from node_modules.
+				{props.message}
 			</article>
 		</div>
 	);

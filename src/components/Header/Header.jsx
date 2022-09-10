@@ -1,4 +1,4 @@
-import cls from './Header.module.css'
+import cls from './Header.module.scss'
 
 const Header = () => {
 	return (
