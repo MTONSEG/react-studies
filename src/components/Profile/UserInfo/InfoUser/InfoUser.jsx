@@ -1,6 +1,6 @@
 import cls from './InfoUser.module.scss';
 
-const InfoUser = () => {
+const InfoUser = (props) => {
 	return (
 		<div className={cls.block}>
 			<h3 className={cls.userName}>Max P.</h3>

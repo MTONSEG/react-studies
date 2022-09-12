@@ -3,14 +3,15 @@ import MyPosts from './MyPosts/MyPosts';
 import UserBgPic from './UserBgPic/UserBgPic';
 import UserInfo from './UserInfo/UserInfo';
 
-const Main = (props) => {
+const Profile = (props) => {
+
 	return (
 		<div className={cls.block}>
 			<UserBgPic />
 			<UserInfo/>
-			<MyPosts/>
+			<MyPosts posts={props.posts}/>
 		</div>
 	)
 }
 
-export default Main;
+export default Profile;

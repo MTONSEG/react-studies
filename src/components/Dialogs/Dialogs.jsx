@@ -3,10 +3,12 @@ import Messages from './Messages/Messages';
 import Names from './Names/Names';
 
 const Dialogs = (props) => {
+
+
     return (
         <div className={cls.block}>
-            <Names/>
-            <Messages />
+            <Names names={props.users}/>
+            <Messages messages={props.messages}/>
         </div>
     );
 }

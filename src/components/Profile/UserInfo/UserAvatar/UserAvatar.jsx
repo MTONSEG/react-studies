@@ -1,6 +1,6 @@
 import cls from './UserAvatar.module.scss';
 
-const UserAvatar = () => {
+const UserAvatar = (props) => {
 	return (
 		<div className={cls.block}>
 			<img
