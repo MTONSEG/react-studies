@@ -1,3 +1,21 @@
 .block {
+	display: grid;
+	grid-template-columns: 4fr 9fr;
+	grid-template-rows: 100%;
+	grid-column-gap: 20px;
+	height: 100%;
+}
 
+.users {
+	background: rgb(255, 254, 243);
+	padding: 10px 15px;
+	border-right: 2px solid grey;
+	border-left: 2px solid grey;;
+}
+
+.user {
+	font-size: 18px;
+	margin-bottom: 10px;
+	line-height: 125%;
+	color: rgb(101, 102, 102);
 }

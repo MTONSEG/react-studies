@@ -1,4 +1,4 @@
-import cls from './UserAvatar.module.css';
+import cls from './UserAvatar.module.scss';
 
 const UserAvatar = () => {
 	return (

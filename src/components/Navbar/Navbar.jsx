@@ -1,10 +1,9 @@
 import cls from './Navbar.module.scss';
 import { NavLink } from 'react-router-dom';
 
-
-const isActive = ({ isActive }) => !isActive ? cls.link : `${cls.link} ${cls.selected}`;
-
 const Nav = (props) => {
+	const isActive = ({ isActive }) => !isActive ? cls.link : `${cls.link} ${cls.selected}`;
+
 	return (
 		<nav className={cls.block}>
 			<ul className={cls.list}>

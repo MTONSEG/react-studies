@@ -1,0 +1,14 @@
+.user {
+	font-size: 18px;
+	line-height: 125%;
+	transition: .3s;
+	&:hover {
+		background: rgba(0, 0, 0, 0.1);
+	}
+}
+
+.link {
+	display: block;
+	padding: 5px 10px;
+	color: rgb(101, 102, 102);
+}

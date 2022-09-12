@@ -1,4 +1,4 @@
-import cls from './InfoUser.module.css';
+import cls from './InfoUser.module.scss';
 
 const InfoUser = () => {
 	return (

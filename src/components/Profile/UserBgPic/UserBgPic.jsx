@@ -1,4 +1,4 @@
-import cls from './UserBgPic.module.css';
+import cls from './UserBgPic.module.scss';
 
 const UserBgPic = (props) => {
 	return (
