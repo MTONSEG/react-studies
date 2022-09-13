@@ -9,7 +9,7 @@ const Profile = (props) => {
 		<div className={cls.block}>
 			<UserBgPic />
 			<UserInfo/>
-			<MyPosts posts={props.posts}/>
+			<MyPosts posts={props.state.postsData}/>
 		</div>
 	)
 }

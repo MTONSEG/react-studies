@@ -2,9 +2,21 @@
 	font-size: 18px;
 	line-height: 125%;
 	transition: .3s;
+	display: flex;
+	align-items: center;
+	padding: 5px;
 	&:hover {
 		background: rgba(0, 0, 0, 0.1);
 	}
+}
+
+.avatar {
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	overflow: hidden;
+	flex-shrink: 0;
 }
 
 .link {

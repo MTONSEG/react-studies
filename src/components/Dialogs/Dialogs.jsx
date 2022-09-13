@@ -7,8 +7,8 @@ const Dialogs = (props) => {
 
     return (
         <div className={cls.block}>
-            <Names names={props.users}/>
-            <Messages messages={props.messages}/>
+            <Names names={props.state.userData}/>
+            <Messages messages={props.state.messageData}/>
         </div>
     );
 }
