@@ -1,5 +1,5 @@
 import './App.scss';
-import { BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Profile from '../Profile/Profile';
@@ -14,18 +14,28 @@ const App = (props) => {
     return (
         <BrowserRouter>
             <div className='wrapper'>
-                <Header />
+                <Header/>
                 <Navbar state={props.state.sidebar}/>
                 <div className='main-container'>
                     <Routes>
-                        <Route path='/profile/*' element={<Profile state={props.state.profilePage} />} />
-                        <Route path='/dialogs/*' element={<Dialogs state={props.state.dialogsPage} />} />
-                        <Route path='/news/*' element={<News/>} />
-                        <Route path='/music/*' element={<Music/>} />
-                        <Route path='/settings/*' element={<Settings />} />
+                        <Route
+                            path='/profile/*'
+                            element={<Profile state={props.state.profilePage}/>}/>
+                        <Route
+                            path='/dialogs/*'
+                            element={<Dialogs state={props.state.dialogsPage}/>}/>
+                        <Route
+                            path='/news/*'
+                            element={<News/>}/>
+                        <Route
+                            path='/music/*'
+                            element={<Music/>}/>
+                        <Route
+                            path='/settings/*'
+                            element={<Settings/>}/>
                     </Routes>
                 </div>
-                <Footer />
+                <Footer/>
             </div>
         </BrowserRouter>
     );
