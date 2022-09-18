@@ -3,22 +3,32 @@ import Message from './Message/Message';
 import React from "react";
 
 const Messages = (props) => {
-    let messageElements = props.messages.map((elem, index) => <Message message={elem.message} key={index}/>)
+    let messageElements = props.messages.map((elem, index) => <Message message={elem.message} key={index} />)
 
-    let newMsgElement = React.createRef();
+    let newMessageElement = React.createRef();
 
-    let addPost = () =>{
-        let text = newMsgElement.current.value;
-        alert(text);
+    let addMess = () => {
+        props.addMess();
+    }
+
+    let onChangeMessage = () => {
+        let text = newMessageElement.current.value;
+        props.updateNewMessText(text);
     }
 
     return (
         <div className={cls.messages}>
             {messageElements}
-            <textarea ref={newMsgElement}></textarea>
-            <button onClick={addPost}>Send</button>
+            <textarea
+                onChange={onChangeMessage}
+                ref={newMessageElement}
+                value={props.newMessageText}>
+            </textarea>
+            <button onClick={addMess}>Send</button>
         </div>
     );
+
 }
 
 export default Messages;
+

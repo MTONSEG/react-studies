@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import { BrowserRouter } from "react-router-dom";
-import state, { addMess, addPosts, updateNewMessText, updateNewPostText, subscribe } from "./redux/state";
+import { addMess, addPosts, updateNewMessText, updateNewPostText } from "./redux/state";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
-const rerenderEntireTree = (state) => {
+export const rerenderEntireTree = (state) => {
+	
 	root.render(
 		<React.StrictMode>
 			<BrowserRouter>
@@ -24,5 +24,3 @@ const rerenderEntireTree = (state) => {
 	);
 }
 
-rerenderEntireTree(state);
-subscribe(rerenderEntireTree);

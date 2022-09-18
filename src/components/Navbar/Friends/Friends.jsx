@@ -4,7 +4,10 @@ import FriendsItem from "./FriendsItem/FriendsItem";
 const Friends = (props) => {
 	let usersElement = props.users.map((item, index) => {
 		return (
-			<FriendsItem name={item.name} imageSrc={item.imageSrc}/>
+			<FriendsItem
+				name={item.name}
+				imageSrc={item.imageSrc}
+				key={index} />
 		)
 	})
 

@@ -6,6 +6,7 @@ const UserAvatar = (props) => {
 			<img
 				className={cls.image} src='https://picsum.photos/128'
 			/>
+			
 		</div>
 	);
 }

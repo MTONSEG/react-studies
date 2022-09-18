@@ -1,5 +1,9 @@
+let rerenderEntireTree = () => {
+    console.log('Success')
+}
+
 const state = {
-    profilePage:{
+    profilePage: {
         postsData: [
             {
                 id: 1,
@@ -26,7 +30,8 @@ const state = {
                 message: 'Windows operating system, separate your paths by semicolons',
                 imageSrc: 'https://picsum.photos/200/300/?blur'
             },
-        ]
+        ],
+        newPostText: 'Hello, World!',
     },
     dialogsPage: {
         userData: [
@@ -62,9 +67,10 @@ const state = {
             { id: 3, message: 'How old are you ?' },
             { id: 4, message: 'It fine!' },
             { id: 5, message: 'Are you ?' },
-        ]
+        ],
+        newMessageText: 'test'
     },
-    sidebar:{
+    sidebar: {
         friends: [
             {
                 name: 'Maksym',
@@ -81,6 +87,46 @@ const state = {
             }
         ],
     }
+}
+
+
+export const addPosts = () => {
+    let idPost = state.profilePage.postsData.length + 1
+    let newPost = {
+        id: idPost,
+        message: state.profilePage.newPostText,
+        imageSrc: 'https://picsum.photos/200/300/?blur'
+    }
+
+    state.profilePage.postsData.push(newPost)
+    state.profilePage.newPostText = ''
+    rerenderEntireTree(state);
+}
+
+export const updateNewPostText = (newPost) => {
+    state.profilePage.newPostText = newPost;
+    rerenderEntireTree(state)
+}
+
+export const addMess = () => {
+    let idMess = state.dialogsPage.messageData.length + 1;
+    let newMess = {
+        id: idMess,
+        message: state.dialogsPage.newMessageText
+    };
+
+    state.dialogsPage.messageData.push(newMess);
+    state.dialogsPage.newMessageText = '';
+    rerenderEntireTree(state);
+}
+
+export const updateNewMessText = (newText) => {
+    state.dialogsPage.newMessageText = newText;
+    rerenderEntireTree(state)
+}
+
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer;
 }
 
 export default state;

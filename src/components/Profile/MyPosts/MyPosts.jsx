@@ -1,15 +1,19 @@
-import React from "react";
+import React from 'react';
 import cls from './MyPosts.module.scss';
 import Post from './Post/Post';
 
 const MyPosts = (props) => {
-	let postElements = props.posts.map(post => <Post imageSrc={post.imageSrc} message={post.message} />);
+	let postElements = props.posts.map((post, index) => <Post imageSrc={post.imageSrc} message={post.message} key={index} />);
 
-	let newPostElement = React.createRef();
+	let newPostText = React.createRef();
 
-	let addPosts = ()=>{
-		let text = newPostElement.current.value;
-		alert(text);
+	let addPost = () => {
+		props.addPosts();
+	}
+
+	let onChangePost = () => {
+		let text = newPostText.current.value;
+		props.updateNewPostText(text);
 	}
 
 	return (
@@ -18,13 +22,15 @@ const MyPosts = (props) => {
 			<form action='#' className={cls.form}>
 				<textarea
 					className={cls.input}
-					ref={newPostElement}
-					placeholder='your news...'>
+					ref={newPostText}
+					onChange={onChangePost}
+					value={props.newPostText}>
 				</textarea>
-				<button
+				<input
 					className={cls.btn}
-					onClick={addPosts}
-				>Send</button>
+					type="button"
+					value='Send'
+					onClick={addPost} />
 			</form>
 			{postElements}
 		</div>

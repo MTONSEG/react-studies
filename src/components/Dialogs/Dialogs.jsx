@@ -4,11 +4,14 @@ import Names from './Names/Names';
 
 const Dialogs = (props) => {
 
-
     return (
         <div className={cls.block}>
-            <Names names={props.state.userData}/>
-            <Messages messages={props.state.messageData}/>
+            <Names names={props.dialogsPage.userData} />
+            <Messages
+                messages={props.dialogsPage.messageData}
+                addMess={props.addMess}
+                newMessageText={props.dialogsPage.newMessageText}
+                updateNewMessText={props.updateNewMessText} />
         </div>
     );
 }
