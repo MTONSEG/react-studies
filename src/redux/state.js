@@ -101,10 +101,11 @@ let store = {
     },
     dispatch(action) {
         if (action.type === ADD_POST) {
-            let idPost = this._state.profilePage.postsData.length + 1
+            let idPost = this._state.profilePage.postsData.length + 1;
+            let post = this._state.profilePage.newPostText;
             let newPost = {
                 id: idPost,
-                message: this._state.profilePage.newPostText,
+                message: post,
                 imageSrc: 'https://picsum.photos/200/300/?blur'
             }
 
@@ -113,9 +114,10 @@ let store = {
             this._callSubscriber(this._state);
         } else if (action.type === ADD_MESSAGE) {
             let idMess = this._state.dialogsPage.messageData.length + 1;
+            let message = this._state.dialogsPage.newMessageText;
             let newMess = {
                 id: idMess,
-                message: this._state.dialogsPage.newMessageText
+                message: message
             };
 
             this._state.dialogsPage.messageData.push(newMess);
@@ -142,4 +144,4 @@ export const updateNewMessActionCreator = (text) => ({
     newMessage: text
 })
 
-export default store;
+export default store; 

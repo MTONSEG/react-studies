@@ -3,13 +3,14 @@ import Messages from './Messages/Messages';
 import Names from './Names/Names';
 
 const Dialogs = (props) => {
+    let store = props.store.getState().dialogsPage;
 
     return (
         <div className={cls.block}>
-            <Names names={props.dialogsPage.userData} />
+            <Names names={store.userData} />
             <Messages
-                messages={props.dialogsPage.messageData}
-                newMessText={props.dialogsPage.newMessText}
+                messages={store.messageData}
+                newMessText={store.newMessText}
                 dispatch={props.dispatch} />
         </div>
     );

@@ -5,16 +5,15 @@ import { addMessActionCreator, updateNewMessActionCreator } from '../../../redux
 
 const Messages = (props) => {
     let messageElements = props.messages.map((elem, index) => <Message message={elem.message} key={index} />)
-
-    let newMessageElement = React.createRef();
+    let newMessText = props.newMessageText;
 
     let addMess = () => {
         let action = addMessActionCreator();
         props.dispatch(action)
     }
 
-    let onChangeMessage = () => {
-        let text = newMessageElement.current.value;
+    let onChangeMessage = (e) => {
+        let text = e.target.value;
         let action = updateNewMessActionCreator(text);
         props.dispatch(action)
     }
@@ -24,8 +23,7 @@ const Messages = (props) => {
             {messageElements}
             <textarea
                 onChange={onChangeMessage}
-                ref={newMessageElement}
-                value={props.newMessageText}>
+                value={newMessText}>
             </textarea>
             <button onClick={addMess}>Send</button>
         </div>
