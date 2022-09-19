@@ -1,6 +1,7 @@
 import React from 'react';
 import cls from './MyPosts.module.scss';
 import Post from './Post/Post';
+import { updateNewPostActionCreator, addPostActionCreator } from '../../../redux/state';
 
 const MyPosts = (props) => {
 	let postElements = props.posts.map((post, index) => <Post imageSrc={post.imageSrc} message={post.message} key={index} />);
@@ -8,12 +9,14 @@ const MyPosts = (props) => {
 	let newPostText = React.createRef();
 
 	let addPost = () => {
-		props.addPosts();
+		let action = addPostActionCreator();
+		props.dispatch(action);
 	}
 
 	let onChangePost = () => {
 		let text = newPostText.current.value;
-		props.updateNewPostText(text);
+		let action = updateNewPostActionCreator(text)
+		props.dispatch(action)
 	}
 
 	return (

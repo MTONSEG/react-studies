@@ -1,6 +1,7 @@
 import cls from './Messages.module.scss';
 import Message from './Message/Message';
 import React from "react";
+import { addMessActionCreator, updateNewMessActionCreator } from '../../../redux/state';
 
 const Messages = (props) => {
     let messageElements = props.messages.map((elem, index) => <Message message={elem.message} key={index} />)
@@ -8,12 +9,14 @@ const Messages = (props) => {
     let newMessageElement = React.createRef();
 
     let addMess = () => {
-        props.addMess();
+        let action = addMessActionCreator();
+        props.dispatch(action)
     }
 
     let onChangeMessage = () => {
         let text = newMessageElement.current.value;
-        props.updateNewMessText(text);
+        let action = updateNewMessActionCreator(text);
+        props.dispatch(action)
     }
 
     return (
