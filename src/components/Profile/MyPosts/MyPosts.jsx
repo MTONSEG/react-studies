@@ -1,7 +1,7 @@
 import React from 'react';
 import cls from './MyPosts.module.scss';
 import Post from './Post/Post';
-import { updateNewPostActionCreator, addPostActionCreator } from '../../../redux/state';
+import { updateNewPostActionCreator, addPostActionCreator } from '../../../redux/profile_Reducer';
 
 const MyPosts = (props) => {
 	let postElements = props.posts.map((post, index) => <Post imageSrc={post.imageSrc} message={post.message} key={index} />);
