@@ -1,4 +1,3 @@
-import React from 'react';
 import cls from './MyPosts.module.scss';
 import Post from './Post/Post';
 
