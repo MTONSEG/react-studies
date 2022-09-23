@@ -18,3 +18,11 @@
 	line-height: 125%;
 	color: rgb(101, 102, 102);
 }
+
+.messages {
+	background: #fff;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
