@@ -9,10 +9,7 @@ const Profile = (props) => {
         <div className={cls.block}>
             <UserBgPic />
             <UserInfo />
-            <MyPostsContainer
-                store={props.store}
-            />
-
+            <MyPostsContainer />
         </div>
     )
 }

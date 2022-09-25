@@ -2,7 +2,9 @@ import cls from './MyPosts.module.scss';
 import Post from './Post/Post';
 
 const MyPosts = (props) => {
-	let postElements = props.posts.map((post, index) => <Post imageSrc={post.imageSrc} message={post.message} key={index} />);
+	let postElements = props.posts.map((post, index) => {
+		<Post imageSrc={post.imageSrc} message={post.message} key={index} />
+	});
 
 	let onAddPost = () => {
 		props.addPost()

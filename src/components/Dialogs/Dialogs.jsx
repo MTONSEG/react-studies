@@ -5,12 +5,7 @@ import NameItem from './Names/NameItem';
 const Dialogs = (props) => {
     let userElements = props.userData.map((user, index) => {
         return (
-            <NameItem
-                id={user.id}
-                name={user.name}
-                imageSrc={user.imageSrc}
-                key={index}
-            />
+            <NameItem id={user.id} name={user.name} imageSrc={user.imageSrc} key={index}/>
         )
     })
     let messageElements = props.messageData.map((elem, index) => <Message message={elem.message} key={index} />)
