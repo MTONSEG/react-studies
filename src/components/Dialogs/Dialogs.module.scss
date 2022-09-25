@@ -7,7 +7,6 @@
 
 .users {
 	background: rgb(255, 254, 243);
-	padding: 10px 15px;
 	border-right: 2px solid grey;
 	border-left: 2px solid grey;;
 }
@@ -17,4 +16,12 @@
 	margin-bottom: 10px;
 	line-height: 125%;
 	color: rgb(101, 102, 102);
+}
+
+.messages {
+	background: #fff;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
